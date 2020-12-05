@@ -54,7 +54,9 @@ public class main {
 			}
 			//3- Actualizar Cliente
 			else if(menu==3) {
-				System.out.println("Introduzca los datos para crear el cliente");
+				System.out.println("Introduzca los datos para modificar el cliente");
+				System.out.println("Indique el id del cliente:");
+				int idCliente = teclado.nextInt();
 				System.out.println("Indique el nombre del cliente:");
 				String nombreCliente = teclado.next();
 				System.out.println("Indique los apellidos del cliente");
@@ -65,9 +67,7 @@ public class main {
 				String dniCliente=teclado.next();
 				System.out.println("Indique la clave del cliente");
 				String claveCliente=teclado.next();
-				Clientes cli = new Clientes(nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
-				//Lo siguiente da error
-				Clientes cli2 = new Clientes(3, nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
+				Clientes cli = new Clientes(idCliente, nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
 				FactoryCrud.updateClientes(cli);
 			}
 			//4- Eliminar Cliente

@@ -15,11 +15,12 @@ import pojos.Clientes;
  *
  */
 public class FactoryCrud {
+	 
 	public static SessionFactory getSessionFactory() {
 		SessionFactory sessionFactory = new Configuration().addAnnotatedClass(Clientes.class).configure().buildSessionFactory();
 		return sessionFactory;
 	}
-
+	
 	public static void create(Clientes cliente) {
 		Session sessionObj = getSessionFactory().openSession();
 		Transaction transObj = sessionObj.beginTransaction();
@@ -28,7 +29,6 @@ public class FactoryCrud {
 		sessionObj.close();
 		System.out.println("Cliente " + cliente.getIdCliente() + " insertada correctamente");
 	} 
-	@SuppressWarnings("rawtypes")
 	public static List readClientes() {
 		Session sessionObj = getSessionFactory().openSession();
 		String query = "FROM Clientes";
