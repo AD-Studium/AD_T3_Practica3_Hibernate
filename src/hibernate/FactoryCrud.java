@@ -15,7 +15,7 @@ import pojos.Clientes;
  *
  */
 public class FactoryCrud {
-	private static SessionFactory getSessionFactory() {
+	public static SessionFactory getSessionFactory() {
 		SessionFactory sessionFactory = new Configuration().addAnnotatedClass(Clientes.class).configure().buildSessionFactory();
 		return sessionFactory;
 	}

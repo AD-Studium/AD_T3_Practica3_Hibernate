@@ -66,6 +66,8 @@ public class main {
 				System.out.println("Indique la clave del cliente");
 				String claveCliente=teclado.next();
 				Clientes cli = new Clientes(nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
+				//Lo siguiente da error
+				Clientes cli2 = new Clientes(3, nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
 				FactoryCrud.updateClientes(cli);
 			}
 			//4- Eliminar Cliente

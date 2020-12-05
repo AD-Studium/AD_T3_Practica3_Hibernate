@@ -33,6 +33,14 @@ public class Clientes implements java.io.Serializable {
 	public Clientes() {
 	}
 
+	public Clientes(int idCliente,String nombre, String apellidos, String email, String dni, String clave) {
+		this.idCliente = idCliente;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.email = email;
+		this.dni = dni;
+		this.clave = clave;
+	}
 	public Clientes(String nombre, String apellidos, String email, String dni, String clave) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -40,7 +48,9 @@ public class Clientes implements java.io.Serializable {
 		this.dni = dni;
 		this.clave = clave;
 	}
-
+	public Clientes(int idCliente) {
+		this.idCliente = idCliente;
+	}
 	public Integer getIdCliente() {
 		return this.idCliente;
 	}
