@@ -2,6 +2,7 @@
  * 
  */
 package hibernate;
+import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -30,11 +31,17 @@ public class FactoryCrud {
 		System.out.println("Cliente " + cliente.getIdCliente() + " insertada correctamente");
 	} 
 	public static List readClientes() {
+		String c = "FROM Clientes";
 		Session sessionObj = getSessionFactory().openSession();
-		String query = "FROM Clientes";
-		List resultado = sessionObj.createQuery(query).list();
+		List results = sessionObj.createQuery(c).list();
+		Iterator clientesIterator = results.iterator();
+		while (clientesIterator.hasNext()) {
+		Clientes c2 = (Clientes) clientesIterator.next();
+		System.out.println(" - " + c2.getNombre() + " - " +
+		c2.getApellidos() + " - " + c2.getDni() + " - " + c2.getEmail()+ " - " +c2.getClave());
+		}
 		sessionObj.close();
-		return resultado;
+		return results;	
 	} 
 	public static void updateClientes(Clientes cliente) {
 		Session sessionObj = getSessionFactory().openSession();

@@ -54,6 +54,8 @@ public class main {
 			}
 			//3- Actualizar Cliente
 			else if(menu==3) {
+				Clientes cli1 = new Clientes("Jaime", "Romero", "jaime@grupostudium.com","12345678M","clavedeclienteLaura");
+				FactoryCrud.create(cli1);
 				System.out.println("Introduzca los datos para modificar el cliente");
 				System.out.println("Indique el id del cliente:");
 				int idCliente = teclado.nextInt();

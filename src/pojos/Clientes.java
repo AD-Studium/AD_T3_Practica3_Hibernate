@@ -32,10 +32,10 @@ public class Clientes implements java.io.Serializable {
 
 	public Clientes() {
 	}
-	public Clientes(int idCliente) {
+	public Clientes(Integer idCliente) {
 		this.idCliente = idCliente;
 	}
-	public Clientes(int idCliente,String nombre, String apellidos, String email, String dni, String clave) {
+	public Clientes(Integer idCliente,String nombre, String apellidos, String email, String dni, String clave) {
 		this.idCliente = idCliente;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
