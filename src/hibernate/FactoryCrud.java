@@ -30,11 +30,11 @@ public class FactoryCrud {
 		sessionObj.close();
 		System.out.println("Cliente " + cliente.getIdCliente() + " insertada correctamente");
 	} 
-	public static List readClientes() {
+	public static List<?> readClientes() {
 		String c = "FROM Clientes";
 		Session sessionObj = getSessionFactory().openSession();
-		List results = sessionObj.createQuery(c).list();
-		Iterator clientesIterator = results.iterator();
+		List<?> results = sessionObj.createQuery(c).list();
+		Iterator<?> clientesIterator = results.iterator();
 		while (clientesIterator.hasNext()) {
 		Clientes c2 = (Clientes) clientesIterator.next();
 		System.out.println(" - " + c2.getNombre() + " - " +

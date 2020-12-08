@@ -12,7 +12,7 @@ import pojos.Clientes;
  * @author Alvca
  *
  */
-public class main {
+public class Main {
 	static Scanner menus = new Scanner(System.in);
 	static Scanner teclado = new Scanner(System.in);
 	static int menu;
@@ -54,8 +54,8 @@ public class main {
 			}
 			//3- Actualizar Cliente
 			else if(menu==3) {
-				Clientes cli1 = new Clientes("Jaime", "Romero", "jaime@grupostudium.com","12345678M","clavedeclienteLaura");
-				FactoryCrud.create(cli1);
+				//Clientes cli1 = new Clientes("Jaime", "Romero", "jaime@grupostudium.com","12345678M","clavedeclienteLaura");
+				//FactoryCrud.create(cli1);
 				System.out.println("Introduzca los datos para modificar el cliente");
 				System.out.println("Indique el id del cliente:");
 				int idCliente = teclado.nextInt();
