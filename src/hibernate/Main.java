@@ -14,15 +14,16 @@ import pojos.Clientes;
  */
 public class Main {
 	static Scanner menus = new Scanner(System.in);
-	static Scanner teclado = new Scanner(System.in);
+	static Scanner teclado;
 	static int menu;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		teclado = new Scanner(System.in);
 		do {
+			
 			//Creamos un menu para realizar las pruebas.
 			System.out.println("Seleccione que desea hacer, introduzca el numero elegido:");
 			System.out.println("1- Crear Cliente");
@@ -39,7 +40,7 @@ public class Main {
 				String nombreCliente = teclado.next();
 				System.out.println("Indique los apellidos del cliente");
 				String apellidosCliente=teclado.next();
-				System.out.println("_Indique el email del cliente");
+				System.out.println("Indique el email del cliente");
 				String emailCliente=teclado.next();
 				System.out.println("Indique el DNI del cliente:");
 				String dniCliente=teclado.next();
@@ -63,7 +64,7 @@ public class Main {
 				String nombreCliente = teclado.next();
 				System.out.println("Indique los apellidos del cliente");
 				String apellidosCliente=teclado.next();
-				System.out.println("_Indique el email del cliente");
+				System.out.println("Indique el email del cliente");
 				String emailCliente=teclado.next();
 				System.out.println("Indique el DNI del cliente:");
 				String dniCliente=teclado.next();

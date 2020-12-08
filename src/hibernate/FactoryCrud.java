@@ -70,5 +70,4 @@ public class FactoryCrud {
 		sessionObj.close();
 		System.out.println("Eliminado correctamente");
 	}
-
 } 
