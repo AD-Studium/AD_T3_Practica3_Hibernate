@@ -3,7 +3,6 @@
  */
 package hibernate;
 
-
 import java.util.Scanner;
 
 import pojos.Clientes;
@@ -37,15 +36,15 @@ public class Main {
 			if(menu==1) {
 				System.out.println("Introduzca los datos para crear el cliente");
 				System.out.println("Indique el nombre del cliente:");
-				String nombreCliente = teclado.next();
+				String nombreCliente = teclado.nextLine();
 				System.out.println("Indique los apellidos del cliente");
-				String apellidosCliente=teclado.next();
+				String apellidosCliente=teclado.nextLine();
 				System.out.println("Indique el email del cliente");
-				String emailCliente=teclado.next();
+				String emailCliente=teclado.nextLine();
 				System.out.println("Indique el DNI del cliente:");
-				String dniCliente=teclado.next();
+				String dniCliente=teclado.nextLine();
 				System.out.println("Indique la clave del cliente");
-				String claveCliente=teclado.next();
+				String claveCliente=teclado.nextLine();
 				Clientes cli1 = new Clientes(nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
 				FactoryCrud.create(cli1);
 			}
@@ -59,17 +58,17 @@ public class Main {
 				//FactoryCrud.create(cli1);
 				System.out.println("Introduzca los datos para modificar el cliente");
 				System.out.println("Indique el id del cliente:");
-				int idCliente = teclado.nextInt();
+				int idCliente = Integer.parseInt(teclado.nextLine());
 				System.out.println("Indique el nombre del cliente:");
-				String nombreCliente = teclado.next();
+				String nombreCliente = teclado.nextLine();
 				System.out.println("Indique los apellidos del cliente");
-				String apellidosCliente=teclado.next();
+				String apellidosCliente=teclado.nextLine();
 				System.out.println("Indique el email del cliente");
-				String emailCliente=teclado.next();
+				String emailCliente=teclado.nextLine();
 				System.out.println("Indique el DNI del cliente:");
-				String dniCliente=teclado.next();
+				String dniCliente=teclado.nextLine();
 				System.out.println("Indique la clave del cliente");
-				String claveCliente=teclado.next();
+				String claveCliente=teclado.nextLine();
 				Clientes cli = new Clientes(idCliente, nombreCliente, apellidosCliente, emailCliente,dniCliente,claveCliente);
 				FactoryCrud.updateClientes(cli);
 			}
